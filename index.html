@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../codeplanner/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script>scripts</script>
     <title>CodePlanner</title>
 </head>
 <body>
-    <div class="section-1">
+    <div id="Inicio" class="section-1">
         <!-- Menu superior com logo e links de navegação -->
         <div class="menu-1">
             <div class="title">
@@ -16,10 +19,13 @@
             </div>
             <nav class="menu-links">
                 <!-- Links principais do menu -->
-                <a href="#"><h3 class="Servicos">Serviços</h3></a>
-                <a href="#"><h3 class="Quem-Somos">Quem somos</h3></a>
-                <a href="#"><h3 class="Contato">Contato</h3></a>
+                 <a href="#Inicio"><h3 class="Inicio">Início</h3></a>
+                <a href="#Servicos"><h3 class="Servicos">Serviços</h3></a>
+                <a href="#Quem-Somos"><h3 class="Quem-Somos">Quem somos</h3></a>
+                <a href="#Contato"><h3 class="Contato">Contato</h3></a>
             </nav>
+            <hr style="color: white; position: absolute; left: 5%; width: 90%; top: 1300%;">
+            <a target="_blank"  href="https://www.instagram.com/oliv_soa/" style="position: relative; left: -80%; top: 770px; color: white; font-size: 46px;" class="Insta"><i class="fa fa-instagram"></i></a>
         </div>
 
         <!-- Frase de destaque e descrição principal do site -->
@@ -29,76 +35,24 @@
                 O CodePlanner é uma plataforma voltada para programadores de todos os níveis. Seu objetivo é oferecer uma solução completa para organização de projetos de código, planejamento de estudos e acompanhamento da evolução técnica do usuário.
             </p>
         </div>
-
     </div>
-
-    <!-- Segunda seção com imagem e texto explicando os serviços -->
-    <div class="section-2">
-
-    </div>
-
-    <div class="section-3">
-        <div class="Estudos-Container">
-            <h1 class="texto">Siga-nos nas redes sociais</h1>
-            <div class="Estudo-Item">
-                <img class="" src="../codeplanner/Midia/notebook_redes_sociais.png" alt="">
-            </div>
-            <div class="Estudo-Item">
-                <img class="" src="../codeplanner/Midia/mouse_redes_sociais.jpg" alt="">
-            </div>
-            <div class="Estudo-Item">
-                <img class="" src="../codeplanner/Midia/teclado_redes_sociais.png" alt="">
-            </div>
-            <div class="Estudo-Item">
-                <img class="" src="../codeplanner/Midia/computador_redes_sociais.jpg" alt="">
-            </div>
-            <a href="https://www.instagram.com/oliv_soa/" target="_blank">
-                <button class="redes-sociais">
-                    <p>Redes Sociais</p>
-                </button>
-            </a>
+    <div id="Servicos" class="section-2 reveal-on-load">
+            <h1>
+                
+            </h1>
         </div>
-    </div>
-    <div class="section-4">
-        <h1 class="fale-conosco">Fale
-            <br>
-            conosco
+    <div id="Quem-Somos" class="section-3">
+        <h1>
+
         </h1>
-        <p class="trabalhe-conosco">Quer trabalhar em conjunto? 
-            <br>
-            Preencha o formulário, 
-            <br>
-            e entraremos em contato em breve! 
-            <br>
-            Será um prazer falar com você.</p>
-            <form class="fale-conosco-box">
-                <div>
-                    <input class="nome-aqui-box" placeholder="Nome Aqui" required>
-                </div>
-                <div>
-                    <input class="sobrenome-aqui-box" placeholder="Sobrenome Aqui" required>
-                </div>
-                <div>
-                    <input class="email-aqui-box" placeholder="Seu email aqui" type="email" required>
-                </div>
-                <div>
-                    <input class="mensagem-aqui-box" placeholder="Sua mensagem aqui" required>
-                </div>
-            </form>
-        <div class="cadastrese-2">
-            <h1 style="text-align: center;
-            font-size: 50px;">CodePlanner</h1>
-            <p style="text-align: center;
-            font-size: 20px;">Cadastre seu endereço de e-mail 
-            <br>
-            para receber novidades e atualizações.</p>
-            <form>
-                <div style="text-align: center;">
-                    <input class="email2" placeholder="Endereço de e-mail" type="email">
-                    <button class="button-cadastre-se-2">Cadastre-se</button>
-                </div>
-            </form>
-        </div>
     </div>
+    <div id="Contato" class="section-4">
+        <h1>
+            
+        </h1>
+    </div>
+    <script>
+        document.body.style.overflow = 'hidden';
+    </script>
 </body>
 </html>

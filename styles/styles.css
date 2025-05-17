@@ -1,29 +1,26 @@
-/* Estilização geral do corpo da página */
 body {
     font-family: 'Trebuchet MS', sans-serif;
     margin: 0;
     color: white;
-    text-shadow: #101111; /* Incompleto ou sem efeito visual, pode ser removido */
     overflow-y: scroll;
-    background-image: url('../Midia/Preta.png'); /* Imagem de fundo */
-    background-attachment: fixed; /* Fixa o fundo enquanto rola */
-    background-size: cover; /* Ajusta o tamanho do fundo */
-    background-repeat: repeat-y; /* Repete o fundo verticalmente */
-    background-position: center; /* Centraliza o fundo */
-}
-
-html {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer e Edge */
-}
-
-/* Remove sublinhado dos links */
-a {
+    background-image: url('../Midia/Preta.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+  }
+  
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+  }
+  
+  a {
     text-decoration: none;
-}
-
-/* Primeira seção (banner principal) */
-.section-1 {
+  }
+  
+  .section-1 {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -35,10 +32,9 @@ a {
     padding-top: 20px;
     position: relative;
     letter-spacing: 4px;
-}
-
-/* Menu de navegação fixo no topo */
-.menu-1 {
+  }
+  
+  .menu-1 {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,38 +42,35 @@ a {
     padding: 0 20px;
     position: absolute;
     top: 0;
-    mix-blend-mode: exclusion; /* Efeito visual de contraste */
+    mix-blend-mode: exclusion;
     margin-top: 65px;
-}
-
-/* Logo da plataforma */
-.title img {
+  }
+  
+  .title img {
     width: 300px;
     height: auto;
-    position: relative;
     margin-left: 20px;
     display: inline-block;
-}
-
-/* Título da marca */
-.title {
-    position: relative;
-    left: 5%;
+  }
+  
+  .title {
     font-size: 36px;
     font-weight: bold;
-    margin: 0;
     color: white;
-}
-
-/* Links de navegação à direita do menu */
-.menu-links {
+    margin: 0;
+    left: 5%;
+    position: relative;
+  }
+  
+  .menu-links {
     display: flex;
     gap: 15px;
-    position: relative;
-    left: -5%;
-    top: -10px;
-}
-.menu-links h3 {
+    position: fixed;
+    z-index: 1000;
+    margin-left: 70%;
+  }
+  
+  .menu-links h3 {
     font-size: 14px;
     margin: 5px;
     font-weight: normal;
@@ -86,27 +79,26 @@ a {
     transition: all 0.5s ease;
     opacity: 1;
     transform: scale(1);
-}
-
-.menu-links:hover h3 {
+  }
+  
+  .menu-links:hover h3 {
     opacity: 0.4;
     transform: scale(0.9);
-}
-
-.menu-links:hover h3:hover {
+  }
+  
+  .menu-links h3:hover {
     opacity: 1;
     transform: scale(1);
-}
-
-/* Estilo individual de um dos links */
-.Servicos {
+  }
+  
+  .Servicos {
     transition: .35s;
     cursor: pointer;
-}
-/* Texto principal da página */
-.center {
+  }
+  
+  .center {
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 50%;
     margin-top: -45px;
     transform: translate(-50%, -50%);
@@ -117,12 +109,11 @@ a {
     letter-spacing: 6px;
     color: white;
     mix-blend-mode: exclusion;
-}
-
-/* Texto descritivo logo abaixo do principal */
-.center-pg {
+  }
+  
+  .center-pg {
     position: absolute;
-    top: 58%;
+    top: 62%;
     left: 50%;
     margin-top: -45px;
     transform: translate(-50%, -50%);
@@ -132,354 +123,25 @@ a {
     line-height: 1.6;
     color: white;
     mix-blend-mode: exclusion;
-}
-/* Segunda seção: serviços */
-.section-2 {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.texto {
-    position: absolute;
-    top: 160%;
-    justify-content: center;
-    font-weight: bold;
-    align-items: center;
-    text-align: center;
-    max-width: 1500px;
-    font-size: 44px;
-    letter-spacing: 4px;
-    line-height: 1.6;
-    color: white;
-    mix-blend-mode: exclusion;
-}
-
-/* Container com 3 funcionalidades (estudar, organizar, exportar) */
-.Estudos-Container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    left: 10px;
-    gap: 80px;
-    margin-top: 50px;
-}
-
-/* Cada item de funcionalidade */
-.Estudo-Item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    left: 40px;
-    top: -270px;
-    transition: all 0.5s ease;
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Imagens redondas com sombra */
-.Estudo-Item img {
-    width: 240px;
-    height: 220px;
-    border-radius: 20%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-    justify-content: center;
-    align-items: center;
-
-}
-.Estudo-Item:hover{
-    transform: scale(0.9);
-    transition-duration: .5s;
-}
-
-/* Títulos abaixo de cada imagem */
-.Estudo-Item h1 {
-    margin-top: 10px;
-    font-size: 26px;
-    font-weight: bold;
-    color: white;
-}
-
-.redes-sociais {
-    position: absolute;
-    left: 43.5%;
-    top: 215%;
-    width: 180px;
-    border-radius: 30px;
-    border-width: 1.5px;
-    border-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    background-color: black;
-    color: white;
-    
-}
-
-.redes-sociais:hover {
-    transform: scale(1.1);
-    transition-duration: .5s;
-}
-
-.section-4{
-    height: 100vh;
-    margin-top: 20%;
-    margin-left: 5%;
-}
-
-.fale-conosco{
-    font-size: 60px;
-}
-.trabalhe-conosco{
-    font-size: 25px;
-}
-
-.fale-conosco-box{
-    display: flex;
-    flex-direction: column;
-    margin-left: 80%;
-    margin-top: -10%;
-    gap: 10px;
-}
-
-.nome-aqui-box{
-    box-shadow: 0px, 0px, 10px black;
-    border-radius: 10px;
-    text-align: center;
-}
-.sobrenome-aqui-box{
-    border-radius: 10px;
-    text-align: center;
-}
-.email-aqui-box{
-    border-radius: 10px;
-    text-align: center;
-}
-.mensagem-aqui-box{
-    border-radius: 10px;
-    text-align: center;
-}
-
-.cadastrese-2{
-    margin-top: 450px;
-}
-
-.button-cadastre-se-2{
-    width: 180px;
-    height: 50px;
-    border-radius: 30px;
-    border-width: 1.5px;
-    border-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    font-size: 18px;
-    text-align: center;
-    background-color: black;
-    color: white;
-}
-
-.email2{
-    width: 250px;
-    height: 50px;
-    border-width: 3px;
-    color: white;
-    background-color: transparent;
-}
-/* Estilizações responsivas para dispositivos móveis */
-@media screen and (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
-    .title img {
-        width: 200px;
-        height: auto;
-        left: -25px;
-    }
-    .menu-links {
-        display: none;
-    }
-    .center {
-        font-size: 24px;
-        margin-top: 40px;
-    }
-    .center-pg {
-        display: none;
-    }
-    .section-2 {
-        height: auto;
-        flex-direction: column;
-    }
-    .Estudos-Container {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 250px;
-        
-    }
-    .texto {
-        font-size: 14px;
-        width: 300px;
-        margin-top: -50px;
-    }
-    .Estudos-Container img {
-        width: 300px;
-        height: 250px;
-        margin-top: 150px;
-    }
-    .Estudo-Item {
-        width: 90%;
-    }
-    .btn-1 {
-        font-size: 10px;
-        width: 170px;
-        top: 85%;
-        left: 20%;
-    }
-}
-/* Estilizações para telas entre 480px e 767px */
-@media screen and (min-width: 480px) and (max-width: 767px) and (orientation: portrait)
-{
-    .title img {
-        width: 200px;
-        height: auto;
-        left: -25px;
-    }
-    .center {
-        font-size: 24px;
-        width: 700px;
-        margin-top: -150px;
-    }
-    .center-pg {
-       font-size: 24px;
-       width: 600px;
-       margin-top: -50px;
-    }
-    .section-2 {
-        height: auto;
-        flex-direction: column;
-    }
-    .OurPlan {
-        font-size: 14px;
-        width: 360px;
-        top: 700px;
-    }
-    .Estudos-Container {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 250px;
-        position: relative;
-        top: -150px;
-        margin-top: 150px;
-        
-    }
-    .texto {
-        display: none;
-    }
-    .Estudos-Container img {
-        width: 300px;
-        height: 250px;
-    }
-    .Estudo-Item {
-        width: 90%;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 899px) and (orientation: landscape) {
-    .title img {
-        width: 300px;
-        height: auto;
-        left: -25px;
-    }
-    .menu-links {
-        width: 300px;
-        height: auto;
-    }
-    .center {
-        font-size: 24px;
-        width: 700px;
-        margin-top: 50px;
-    }
-    .center-pg {
-       font-size: 24px;
-       width: 800px;
-       margin-top: 150px;
-    }
-    .section-2 {
-        height: auto;
-        flex-direction: column;
-    }
-    .OurPlan {
-        font-size: 14px;
-        width: 360px;
-        top: 700px;
-    }
-    .Estudos-Container {
-        flex-direction: row;
-        align-items: center;
-        margin-top: 250px;
-        position: relative;
-        top: 150px;
-    }
-    .texto {
-        display: none;
-    }
-    .Estudos-Container img {
-        width: 300px;
-        height: 250px;
-    }
-    .Estudo-Item {
-        width: 90%;
-    }
   }
-@media screen and (min-width: 900px) and (max-width: 1024px) {
-  /* Estilos para tablets */
-  .title img {
-        width: 200px;
-        height: auto;
-        left: -25px;
-    }
-    .center {
-        font-size: 24px;
-        width: 700px;
-        margin-top: -150px;
-    }
-    .center-pg {
-       font-size: 24px;
-       width: 600px;
-       margin-top: -50px;
-    }
-    .section-2 {
-        height: auto;
-        flex-direction: column;
-    }
-    .Estudos-Container {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 250px;
-        position: relative;
-        top: -150px;
-        margin-top: 150px;
-        
-    }
-    .texto {
-        display: none;
-    }
-    .Estudos-Container img {
-        width: 300px;
-        height: 250px;
-    }
-    .Estudo-Item {
-        width: 90%;
-    }
-}
-@media screen and (min-width: 1025px) and (max-width: 1439px) {
-  /* Notebooks comuns (13" a 15.6") */
 
+.Insta{
+  transition: all 0.5s ease;
 }
-@media screen and (min-width: 1440px) and (max-width: 2560px) {
-  /* Notebooks grandes e monitores comuns (21" a 27") */
+
+.Insta:hover{
+  opacity: 1;
+  transform: scale(1.1);
 }
-@media screen and (min-width: 2561px) {
-  /* Monitores grandes e ultra-wide */
-}
+
+  .section-2{
+    height: 100vh;
+  }
+
+  .section-3{
+    height: 100vh;
+  }
+
+  .section-4{
+    height: 100vh;
+  }
