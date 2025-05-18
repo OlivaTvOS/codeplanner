@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../codeplanner/styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script>scripts</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>CodePlanner</title>
 </head>
 <body>
@@ -24,8 +23,14 @@
                 <a href="#Quem-Somos"><h3 class="Quem-Somos">Quem somos</h3></a>
                 <a href="#Contato"><h3 class="Contato">Contato</h3></a>
             </nav>
-            <hr style="color: white; position: absolute; left: 5%; width: 90%; top: 1300%;">
-            <a target="_blank"  href="https://www.instagram.com/oliv_soa/" style="position: relative; left: -80%; top: 770px; color: white; font-size: 46px;" class="Insta"><i class="fa fa-instagram"></i></a>
+            <div class="fixed-menu">
+                <hr class="divisoria-menu">
+                <div>
+                    <a target="_blank" href="https://www.instagram.com/oliv_soa/" class="icone-instagram"><i class="fa fa-instagram"></i></a>
+                    <a target="_blank" href="https://github.com/OlivaTvOS/codeplanner" class="icone-github"><i class="fa fa-github"></i></a>
+                    <a target="_blank" href="https://www.patreon.com/c/CodePlanner" class="icone-patreon redes-animation"><img class="patreon-tamanho" src="../codeplanner/Midia/patreon.png" alt="patreon"></a>
+                </div>
+            </div>
         </div>
 
         <!-- Frase de destaque e descrição principal do site -->
@@ -37,9 +42,29 @@
         </div>
     </div>
     <div id="Servicos" class="section-2 reveal-on-load">
-            <h1>
-                
-            </h1>
+<div class="services-container">
+    <div class="service-box">
+        <h2>Upload de Códigos</h2>
+        <p>Envie seus projetos diretamente para a plataforma. Suporte a múltiplas linguagens como HTML, CSS, JS e mais.</p>
+    </div>
+    <div class="service-box">
+        <h2>Organização Inteligente</h2>
+        <p>Tenha seus projetos organizados por linguagem, estrutura e tipo de forma automática e clara.</p>
+    </div>
+    <div class="service-box">
+        <h2>Análise de Código (em breve)</h2>
+        <p>Receba sugestões de aprendizado personalizadas com base nos seus arquivos. Evolua como desenvolvedor de forma guiada.</p>
+    </div>
+    <div class="service-box">
+        <h2>Dashboard Personalizado</h2>
+        <p>Visualize seu progresso, acompanhe projetos e siga trilhas de aprendizado específicas para seu nível.</p>
+    </div>
+    <div class="service-box">
+        <h2>Modelos de Assinatura</h2>
+        <p>Plano gratuito com funções básicas e planos pagos com análise de código, IA, trilhas e muito mais.</p>
+    </div>
+</div>
+
         </div>
     <div id="Quem-Somos" class="section-3">
         <h1>
@@ -47,9 +72,24 @@
         </h1>
     </div>
     <div id="Contato" class="section-4">
-        <h1>
-            
-        </h1>
+<div class="contact-wrapper">
+    <div class="contact-info">
+        <h2>Informações</h2>
+        <p><strong>Email:</strong> <a href="mailto:support@codeplanner.dev">support@codeplanner.dev</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/oliv_soa/" target="_blank">@oliv_soa</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/OlivaTvOS/codeplanner" target="_blank">OlivaTvOS/codeplanner</a></p>
+        <p><strong>Patreon:</strong> <a href="https://www.patreon.com/c/CodePlanner" target="_blank">/CodePlanner</a></p>
+    </div>
+    <div class="contact-form">
+        <h2>Envie uma mensagem</h2>
+        <form action="#" method="post">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
     </div>
     <script>
         document.body.style.overflow = 'hidden';
