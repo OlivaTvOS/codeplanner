@@ -1,299 +1,242 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Trebuchet MS', sans-serif;
-    margin: 0;
-    color: white;
-    overflow-y: scroll;
-    background-image: url('../Midia/Preta.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: repeat-y;
-    background-position: center;
-  }
-  
-  html {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-behavior: smooth;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  .section-1 {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    position: relative;
-    letter-spacing: 4px;
-  }
-  
-  .menu-1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    position: absolute;
-    top: 0;
-    mix-blend-mode: exclusion;
-    margin-top: 65px;
-  }
-  
-  .title img {
-    width: 300px;
-    height: auto;
-    margin-left: 20px;
-    display: inline-block;
-  }
-  
-  .title {
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-    left: 5%;
-    position: relative;
-  }
-  
-  .menu-links {
-    display: flex;
-    gap: 15px;
-    position: fixed;
-    z-index: 1000;
-    margin-left: 70%;
-  }
-  
-  .menu-links h3 {
-    font-size: 14px;
-    margin: 5px;
-    font-weight: normal;
-    color: white;
-    mix-blend-mode: exclusion;
-    transition: all 0.5s ease;
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .menu-links:hover h3 {
-    opacity: 0.4;
-    transform: scale(0.9);
-  }
-  
-  .menu-links h3:hover {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .Servicos {
-    transition: .35s;
-    cursor: pointer;
-  }
-  
-  .center {
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    margin-top: -45px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 32px;
-    line-height: 1.2;
-    font-weight: bold;
-    letter-spacing: 6px;
-    color: white;
-    mix-blend-mode: exclusion;
-  }
-  
-  .center-pg {
-    position: absolute;
-    top: 62%;
-    left: 50%;
-    margin-top: -45px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    max-width: 800px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: white;
-    mix-blend-mode: exclusion;
-  }
-
-/* Linha horizontal no menu inferior */
-.menu-1 hr.divisoria-menu {
+  font-family: 'Trebuchet MS', sans-serif;
   color: white;
-  position: absolute;
-  left: 5%;
-  width: 90%;
-  top: 1500%;
-  border: none;
-  height: 2px;
-  background-color: white;
+  background-image: url('../Midia/Preta.png');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;
+  overflow-x: hidden;
 }
 
-/* Ícone de rede social (Instagram) */
-.icone-instagram {
-  position: absolute;
+html {
+  scroll-behavior: smooth;
+}
+
+/* HEADER */
+.menu-1 {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.title img {
+  width: 200px;
+  height: auto;
+}
+
+.menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-links h3 {
+  font-size: 16px;
   color: white;
-  font-size: 46px;
-  top: 1550%;
-  left: 20%;
+  transition: 0.3s;
 }
 
-.icone-github {
-  position: absolute;
-  color: white;
-  font-size: 46px;
-  top: 1550%;
-  left: 50%;
+.menu-links h3:hover {
+  opacity: 0.6;
+  transform: scale(0.95);
 }
 
-.icone-patreon {
-  position: absolute;
-  color: white;
-  transition: all 0.5s ease;
-  width: 10px;
-  top: 1555%;
-  left: 80%;
+/* HERO SECTION */
+.section-1 {
+  min-height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
-.patreon-tamanho{
-  width: 46px;
+.center {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
 }
 
-  .section-2{
-    height: 100vh;
-  }
-
-  .services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 40px;
-    gap: 40px;
-    position: absolute;
-    top: 133%;
+.center-pg {
+  font-size: 1.1rem;
+  max-width: 800px;
+  line-height: 1.6;
 }
 
-.service-box {
-    background-color: black(255, 255, 255, 0.05);
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease;
+/* SECTION GERAL */
+.section-2,
+.section-3,
+.section-4 {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.service-box:hover {
-    transform: scale(1.05);
+/* CONTACT FORM */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
 }
 
-.service-box h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #ffffff;
+.contact-info,
+.contact-form {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
-.service-box p {
-    font-size: 14px;
-    color: #dddddd;
+.contact-info h2,
+.contact-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-
-  .section-3{
-    height: 100vh;
-  }
-
-  .section-4{
-    height: 100vh;
-  }
-
-  .contact-wrapper {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 40px;
-    gap: 40px;
-    position: relative;
-    top: 30%;
-}
-
-.contact-info, .contact-form {
-    background-color: black(255, 255, 255, 0.05);
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 30px;
-    width: 400px;
-    box-sizing: border-box;
-    color: white;
-}
-
-.contact-info h2, .contact-form h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #ffffff;
-}
-
-.contact-info p, .contact-info a {
-    font-size: 16px;
-    color: #cccccc;
+.contact-info p,
+.contact-info a {
+  font-size: 1rem;
+  color: #cccccc;
 }
 
 .contact-info a {
-    color: #00bfff;
-    text-decoration: underline;
+  color: #00bfff;
+  text-decoration: underline;
 }
 
 .contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 16px;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #bbbbbb;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
 }
 
 .contact-form button {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #00bfff;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bfff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #009ac9;
+  background-color: #009ac9;
 }
 
-@media (max-width: 900px) {
-    .contact-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
+/* FOOTER ICONS */
+.fixed-menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
 
-    .contact-info, .contact-form {
-        width: 90%;
-    }
+.fixed-menu i,
+.fixed-menu img {
+  font-size: 40px;
+  width: 46px;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+  color: white;
+}
+.icone-patreon{
+  position: relative;
+  top: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .center {
+    font-size: 2rem;
+  }
+
+  .center-pg {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-1 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-links {
+    display: none;
+  }
+
+  .title img {
+    width: 160px;
+  }
+
+  .center {
+    font-size: 1.5rem;
+  }
+
+  .center-pg {
+    font-size: 0.9rem;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fixed-menu {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .center {
+    font-size: 1.2rem;
+  }
+
+  .center-pg {
+    font-size: 0.8rem;
+  }
+
+  .menu-links h3 {
+    font-size: 14px;
+  }
 }

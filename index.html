@@ -25,7 +25,7 @@
             </nav>
             <div class="fixed-menu">
                 <hr class="divisoria-menu">
-                <div>
+                <div class="redes-itens">
                     <a target="_blank" href="https://www.instagram.com/oliv_soa/" class="icone-instagram"><i class="fa fa-instagram"></i></a>
                     <a target="_blank" href="https://github.com/OlivaTvOS/codeplanner" class="icone-github"><i class="fa fa-github"></i></a>
                     <a target="_blank" href="https://www.patreon.com/c/CodePlanner" class="icone-patreon redes-animation"><img class="patreon-tamanho" src="../codeplanner/Midia/patreon.png" alt="patreon"></a>
@@ -42,28 +42,34 @@
         </div>
     </div>
     <div id="Servicos" class="section-2 reveal-on-load">
-<div class="services-container">
-    <div class="service-box">
-        <h2>Upload de Códigos</h2>
-        <p>Envie seus projetos diretamente para a plataforma. Suporte a múltiplas linguagens como HTML, CSS, JS e mais.</p>
-    </div>
-    <div class="service-box">
-        <h2>Organização Inteligente</h2>
-        <p>Tenha seus projetos organizados por linguagem, estrutura e tipo de forma automática e clara.</p>
-    </div>
-    <div class="service-box">
-        <h2>Análise de Código (em breve)</h2>
-        <p>Receba sugestões de aprendizado personalizadas com base nos seus arquivos. Evolua como desenvolvedor de forma guiada.</p>
-    </div>
-    <div class="service-box">
-        <h2>Dashboard Personalizado</h2>
-        <p>Visualize seu progresso, acompanhe projetos e siga trilhas de aprendizado específicas para seu nível.</p>
-    </div>
-    <div class="service-box">
-        <h2>Modelos de Assinatura</h2>
-        <p>Plano gratuito com funções básicas e planos pagos com análise de código, IA, trilhas e muito mais.</p>
-    </div>
+<div>
+  <canvas id="myChart"></canvas>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script class="grafico-tamanho">
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
 
         </div>
     <div id="Quem-Somos" class="section-3">
