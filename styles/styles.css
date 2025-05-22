@@ -185,6 +185,9 @@ html {
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
+  .body{
+    overflow: visible;
+  }
   .center {
     font-size: 2rem;
   }
@@ -195,6 +198,9 @@ html {
 }
 
 @media (max-width: 768px) {
+  .body{
+    overflow: visible;
+  }
   .menu-1 {
     flex-direction: row;
     justify-content: space-between;
@@ -228,6 +234,9 @@ html {
 }
 
 @media (max-width: 480px) {
+  .body{
+    overflow: visible;
+  }
   .center {
     font-size: 1.2rem;
   }
